@@ -149,32 +149,51 @@
 
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <form>
-          <input type="text" class="form-control mb-3" placeholder="Full Name" required>
-          <input type="text" class="form-control mb-3" placeholder="Company / Brand Name">
-          <input type="email" class="form-control mb-3" placeholder="Email Address" required>
-          <input type="text" class="form-control mb-3" placeholder="WhatsApp Number">
-          <select class="form-select mb-4">
-            <option selected>Service Needed</option>
-            <option>Performance Ads</option>
-            <option>Gaming Promotions</option>
-            <option>Creative Design</option>
-            <option>Web / IT Solutions</option>
+
+        <!-- FORM START -->
+        <form action="https://formspree.io/f/xvzkkwea" method="POST">
+          
+          <input type="text"
+                 name="full_name"
+                 class="form-control mb-3"
+                 placeholder="Full Name"
+                 required>
+
+          <input type="text"
+                 name="company"
+                 class="form-control mb-3"
+                 placeholder="Company / Brand Name">
+
+          <input type="email"
+                 name="email"
+                 class="form-control mb-3"
+                 placeholder="Email Address"
+                 required>
+
+          <input type="text"
+                 name="whatsapp"
+                 class="form-control mb-3"
+                 placeholder="WhatsApp Number">
+
+          <select name="service"
+                  class="form-select mb-4"
+                  required>
+            <option value="">Service Needed</option>
+            <option value="Performance Ads">Performance Ads</option>
+            <option value="Gaming Promotions">Gaming Promotions</option>
+            <option value="Creative Design">Creative Design</option>
+            <option value="Web / IT Solutions">Web / IT Solutions</option>
           </select>
-          <button type="submit" class="btn-main w-100">Book Free Audit Call</button>
+
+          <button type="submit" class="btn-main w-100">
+            Book Free Audit Call
+          </button>
+
         </form>
+        <!-- FORM END -->
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p class="mb-1">Unified Eras – Unified IT & Digital Services</p>
-  <p class="mb-1">Varanasi | Greater Noida</p>
-  <p class="mb-1">info@unifiederas.com</p>
-  <p class="mt-3">© 2026 Unified Eras</p>
-</footer>
-
-</body>
-</html>
