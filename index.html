@@ -1,103 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="canonical" href="https://www.unifiederas.com/">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Unified Eras",
-  "url": "https://www.unifiederas.com",
-  "logo": "https://www.unifiederas.com/Logo.png"
-}
-</script>
+
 <meta charset="UTF-8">
-<title>Unified Eras | IT, Advertising & Digital Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- FREE FONT -->
+<title>Unified Eras | IT, Advertising & Digital Services</title>
+
+<link rel="canonical" href="https://www.unifiederas.com/">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Organization",
+ "name":"Unified Eras",
+ "url":"https://www.unifiederas.com",
+ "logo":"https://www.unifiederas.com/Logo.png"
+}
+</script>
+
+<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <!-- BOOTSTRAP -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- ICONS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<!-- ANIMATION -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+
+/* GLOBAL */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
-  font-family:'Poppins',sans-serif;
-  background:#0b0b0b;
-  color:#ffffff;
+font-family:'Poppins',sans-serif;
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#e50914,transparent 70%);
+top:-200px;
+left:-200px;
+opacity:.25;
+filter:blur(120px);
+z-index:-1;
 }
 
 /* NAVBAR */
 .navbar{
-  background:#0b0b0b;
-  width:100%;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+z-index:999;
 }
-.navbar-brand{
-  font-weight:700;
-  color:#fff!important;
-}
+
 .nav-link{
-  color:#fff!important;
-  margin:0 8px;
+color:#fff!important;
+margin:0 10px;
+transition:.3s;
 }
+
 .nav-link:hover{
-  color:#e50914!important;
+color:#ff3c47!important;
+transform:translateY(-2px);
 }
+
 .contact-btn{
-  background:#e50914;
-  color:#fff!important;
-  padding:4px 14px;
-  border-radius:4px;
-  text-decoration:none;
+background:linear-gradient(45deg,#e50914,#ff3c47);
+padding:6px 18px;
+border-radius:30px;
+text-decoration:none;
+color:#fff!important;
 }
+
 .contact-btn:hover{
-  background:#ff1f2d;
+box-shadow:0 0 20px #e50914;
+}
+
+/* HERO */
+.hero{
+padding:140px 0 100px;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+font-weight:700;
+background:linear-gradient(90deg,#fff,#ff3c47);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+opacity:.85;
 }
 
 /* SECTIONS */
 section{
-  padding:120px 0;
-}
-.hero{
-  padding:100px 0 60px 0;
-  text-align:center;
-}
-.hero p{
-  max-width:900px;
-  margin:20px auto;
+padding:110px 0;
 }
 
 /* CARDS */
 .box{
-  background:#0b0b0b;
-  border:1px solid #222;
-  padding:25px;
-  border-radius:8px;
-  height:100%;
-}
-.box h5{
-  color:#e50914;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+padding:30px;
+border-radius:14px;
+transition:.4s;
+backdrop-filter:blur(10px);
+height:100%;
 }
 
-/* CONTACT FORM */
-input,textarea{
-  background:#111!important;
-  border:1px solid #222!important;
-  color:#fff!important;
+.box:hover{
+transform:translateY(-10px);
+border-color:#e50914;
+box-shadow:0 10px 40px rgba(229,9,20,.35);
 }
-input::placeholder,textarea::placeholder{
-  color:#aaa;
+
+.box h5{
+color:#ff3c47;
+margin-bottom:15px;
+}
+
+/* INPUT */
+input,textarea{
+background:#0e0e0e!important;
+border:1px solid #222!important;
+color:#fff!important;
+border-radius:8px!important;
+}
+
+input:focus,textarea:focus{
+border-color:#e50914!important;
+box-shadow:0 0 10px rgba(229,9,20,.5)!important;
+}
+
+/* BUTTON */
+.btn-danger{
+background:linear-gradient(45deg,#e50914,#ff3c47);
+border:none;
+}
+
+.btn-danger:hover{
+box-shadow:0 0 20px #e50914;
 }
 
 /* FOOTER */
 footer{
-  background:#000;
-  padding:25px 0;
-  text-align:center;
-  font-size:14px;
+background:#000;
+border-top:1px solid #222;
+padding:25px 0;
+text-align:center;
 }
+
 </style>
 </head>
 
@@ -106,252 +180,201 @@ footer{
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg">
 <div class="container-fluid px-4">
-  <a class="navbar-brand d-flex flex-column align-items-start" href="#home">
-    <img src="Logo.png" alt="Unified Eras Logo" style="width:70px;">
-    <span style="font-size:14px; margin-top:4px;">Unified Eras</span>
+
+<a class="navbar-brand text-white fw-bold" href="#">
+<img src="Logo.png" width="60"> Unified Eras
 </a>
-  <ul class="navbar-nav ms-auto align-items-center">
-    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-    <li class="nav-item">
-      <a class="contact-btn" href="#contact">Contact Us</a>
-    </li>
-  </ul>
+
+<ul class="navbar-nav ms-auto align-items-center">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+<li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="contact-btn" href="#contact">Contact</a></li>
+</ul>
+
 </div>
 </nav>
 
-<!-- HOME -->
+<!-- HERO -->
 <section id="home" class="hero">
-<div class="container">
-  <h1>Unified <span>IT, Advertising & Digital</span> Services</h1>
-  <p>
-    Unified Eras is a modern IT & Digital Services company operating under the GST
-    registered name <strong>Unified IT & Digital Services</strong>.
-    We specialize in digital advertising, gaming promotions, creative branding,
-    and IT solutions that help businesses grow in the digital era.
-  </p>
+<div class="container" data-aos="fade-up">
+
+<h1>Creative Digital Advertising Agency</h1>
+
+<p>
+Unified Eras delivers performance-driven advertising,
+gaming promotions, branding, and IT solutions helping
+businesses grow faster in the modern digital era.
+</p>
+
+<a href="#services" class="btn btn-danger mt-4 px-4">
+Explore Services
+</a>
+
 </div>
-</section>
-<section class="py-5">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-md-3 mb-3">
-        <h5 class="text-danger">Result-Driven Ads</h5>
-        <p>Performance-focused advertising campaigns.</p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <h5 class="text-danger">Gaming Promotions</h5>
-        <p>Gaming ads, launches & creator collaborations.</p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <h5 class="text-danger">Creative Branding</h5>
-        <p>High-impact creatives & brand visuals.</p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <h5 class="text-danger">IT Solutions</h5>
-        <p>Web, automation & digital infrastructure.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
 <div class="container">
+
 <h2 class="text-center mb-5">Our Services</h2>
 
 <div class="row g-4">
-  <div class="col-md-4">
-    <div class="box">
-      <h5>Advertising & Campaigns</h5>
-      <p>Performance ads, social media advertising, banners, and promotional campaigns for brands.</p>
-<li>Performance-focused social media ads for higher reach and conversions</li>
-  <li>Creative banners and promotional campaigns to boost brand visibility</li>
-  
-    </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="box">
-      <h5>Gaming Promotions</h5>
-      <p>Game launch campaigns, gaming ads, creator collaborations, and influencer-ready promotions.</p>
-<li>Game launch campaigns and high-impact gaming advertisements</li>
-<li>Promotional visuals and marketing assets for game visibility and engagement</li>
+<div class="col-md-4" data-aos="zoom-in">
+<div class="box">
+<h5><i class="fa-solid fa-bullhorn"></i> Advertising Campaigns</h5>
+<p>Performance marketing, social ads and brand promotion campaigns.</p>
+</div>
+</div>
 
-    </div>
-  </div>
+<div class="col-md-4" data-aos="zoom-in">
+<div class="box">
+<h5><i class="fa-solid fa-gamepad"></i> Gaming Promotions</h5>
+<p>Game launches, creator collaborations and gaming marketing.</p>
+</div>
+</div>
 
-  <div class="col-md-4">
-    <div class="box">
-      <h5>Creative Design</h5>
-      <p>Ad creatives, branding concepts, thumbnails, posters, and visual identity solutions.</p>
-<li>High-impact designs optimized for ads and campaigns</li>
-<li>High-impact designs optimized for ads and campaigns</li>
+<div class="col-md-4" data-aos="zoom-in">
+<div class="box">
+<h5><i class="fa-solid fa-palette"></i> Creative Design</h5>
+<p>Brand visuals, thumbnails, posters and advertising creatives.</p>
+</div>
+</div>
 
+<div class="col-md-6" data-aos="fade-up">
+<div class="box">
+<h5><i class="fa-solid fa-chart-line"></i> Social Media Growth</h5>
+<p>Influencer campaigns, engagement strategy and scaling brands online.</p>
+</div>
+</div>
 
-    </div>
-  </div>
+<div class="col-md-6" data-aos="fade-up">
+<div class="box">
+<h5><i class="fa-solid fa-code"></i> Web & IT Solutions</h5>
+<p>Websites, automation systems, AR/VR models and professional 3D services.</p>
+</div>
+</div>
 
-  <div class="col-md-6">
-    <div class="box">
-      <h5>Social Media Growth</h5>
-      <p>Account growth strategies, influencer management, engagement optimization, and scaling.</p>
-</p>
-<ul>
-<li>Influencer collaboration and campaign management</li>
-  <li>Content planning and posting strategy</li>
-  <li>Audience analytics and performance optimization</li>
-</ul>
-
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <div class="box">
-      <h5>Web & IT Solutions</h5>
-<p>
-  Comprehensive web and IT services including business websites, landing pages, automation tools, and advanced 3D solutions such as:
-</p>
-<ul>
-  <li>3D models for AR &amp; VR applications</li>
-  <li>Interior design visualization</li>
-  <li>Product and environment modeling</li>
-  <li>Character modeling and professional character rigging</li>
-</ul>
-  </div>
 </div>
 </div>
 </section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
-<div class="container">
-<h2 class="text-center mb-4">Portfolio Overview</h2>
-<p class="text-center">
-Successfully delivered <strong>25+ projects</strong> across advertising, gaming promotions,
-creative branding, and digital growth.  
-We work closely with creators, influencers, startups, and businesses.
+<div class="container text-center" data-aos="fade-up">
+
+<h2>Portfolio Overview</h2>
+
+<p>
+Successfully delivered 25+ projects across advertising,
+gaming promotions and digital branding solutions.
 </p>
+
 </div>
 </section>
 
 <!-- BLOG -->
 <section id="blog">
 <div class="container">
+
 <h2 class="text-center mb-5">Insights & Blog</h2>
 
 <div class="row g-4">
-  <div class="col-md-4">
-    <div class="box">
-      <h5>Unified Digital Growth</h5>
-      <p>How integrated IT and advertising solutions help brands scale faster.</p>
-    </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="box">
-      <h5>Advertising That Converts</h5>
-      <p>Why result-driven ad campaigns outperform generic marketing efforts.</p>
-    </div>
-  </div>
+<div class="col-md-4" data-aos="zoom-in">
+<div class="box">
+<h5>Digital Growth Strategy</h5>
+<p>Integrated marketing solutions helping brands scale faster.</p>
+</div>
+</div>
 
-  <div class="col-md-4">
-    <div class="box">
-      <h5>Gaming & Influencer Marketing</h5>
-      <p>The power of creators and gaming communities in modern brand promotion.</p>
-    </div>
-  </div>
+<div class="col-md-4" data-aos="zoom-in">
+<div class="box">
+<h5>Advertising That Converts</h5>
+<p>Data-driven campaigns outperform traditional marketing.</p>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="zoom-in">
+<div class="box">
+<h5>Gaming Marketing Power</h5>
+<p>Creators and gaming communities drive modern promotion.</p>
+</div>
+</div>
+
 </div>
 </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<div class="container">
-<h2 class="text-center mb-4">About Unified Eras</h2>
-<p class="text-center">
-Unified Eras is a service-focused digital company operating from Noida and serving clients across India.
-We provide end-to-end IT, advertising, and creative services under one roof,
-helping businesses adapt and succeed in the digital world.
+<div class="container text-center" data-aos="fade-up">
+
+<h2>About Unified Eras</h2>
+
+<p>
+Unified Eras is a digital service company operating from Noida,
+providing IT, advertising and creative solutions across India.
 </p>
+
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <div class="container">
+
 <h2 class="text-center mb-4">Contact Us</h2>
 
-<form
-  action="https://formspree.io/f/mgookqpk"
-  method="POST"
-  class="contact-form col-md-6 mx-auto"
->
-  <input
-    type="text"
-    name="name"
-    class="form-control mb-3"
-    placeholder="Your Name"
-    required
-  >
+<form action="https://formspree.io/f/mgookqpk"
+method="POST"
+class="col-md-6 mx-auto">
 
-  <input
-    type="email"
-    name="email"
-    class="form-control mb-3"
-    placeholder="Your Email"
-    required
-  >
+<input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
 
-  <textarea
-    name="message"
-    rows="4"
-    class="form-control mb-3"
-    placeholder="Reason to Contact"
-    required
-  ></textarea>
+<input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
 
-  <button type="submit" class="btn btn-danger w-100">
-    Send Message
-  </button>
+<textarea name="message" rows="4"
+class="form-control mb-3"
+placeholder="Reason to Contact"
+required></textarea>
+
+<button type="submit" class="btn btn-danger w-100">
+Send Message
+</button>
+
 </form>
 
-
 <p class="text-center mt-4">
-Operating from Noida | Serving clients across India</p>
+Operating from Noida | Serving clients across India
+</p>
+
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<p class="text-center mt-3">
-  © 2026 Unified Eras | Unified IT & Digital Services <br>
-  <a href="mailto:info@unifiederas.com" style="color:#e63946; text-decoration:none;">
-    📞 Call us: +91 120 422 3014 | ✉️ info@unifiederas.com
-  </a>
+
+<p>
+© 2026 Unified Eras | Unified IT & Digital Services <br>
+📞 +91 120 422 3014 | ✉ info@unifiederas.com
 </p>
+
 </footer>
+
+<!-- ANIMATION SCRIPT -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
